@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Input Mahasiswa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <div class="left-panel">
+      <h2>Input Data</h2>
+      <form id="formMahasiswa">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" required />
+        </div>
+        <div class="form-group">
+          <label for="nim">NIM</label>
+          <input type="text" id="nim" required />
+        </div>
+        <div class="form-group">
+          <label for="semester">Semester</label>
+          <input type="number" id="semester" min="1" max="14" required />
+        </div>
+        <div class="form-group">
+          <label for="prodi">Program Studi</label>
+          <select id="prodi" required>
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="TI">Teknik Informatika</option>
+            <option value="TM">Teknik Mesin</option>
+            <option value="TS">Teknik Sipil</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <button type="submit">Kirim Data</button>
+      </form>
+    </div>
+    <div class="right-panel">
+      <div class="info-card">
+        <h3>Informasi Pengiriman</h3>
+        <ul>
+          <li>Data ditempilkan di console</li>
+          <li>Data disimpan di array</li>
+          <li>Jumlah data di-update</li>
+          <li>form akan kembali kosong</li>
+        </ul>
+      </div>
+      <div class="table-card">
+        <h3>Table Mahasiswa</h3>
+        <table id="tabelMahasiswa">
+          <thead>
+            <tr>
+              <th>NO</th>
+              <th>NAMA</th>
+              <th>INFO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>febri</td>
+              <td>
+                <div class="info-cell">
+                  <div>Prodi: TI</div>
+                  <div>Semester: 3</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>rifki</td>
+              <td>
+                <div class="info-cell">
+                  <div>Prodi: SI</div>
+                  <div>Semester: 4</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
