@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pendaftaran Mahasiswa Baru</title>
+</head>
+<body>
+    <h1>Form Pendaftaran</h1>
+    <form method="post" action="proses_pendaftaran.php">
+        <label>Nama Lengkap:</label><br>
+        <input type="text" name="nama" required><br><br>
+
+        <label>Tempat Lahir:</label><br>
+        <input type="text" name="tempat" required><br><br>
+
+        <label>Tanggal Lahir:</label><br>
+        <select name="tgl" required>
+            <option value="">Tanggal</option>
+            <script>
+                for (let i = 1; i <= 31; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+
+        <select name="bln" required>
+            <option value="">Bulan</option>
+            <option value="Januari">Januari</option>
+            <option value="Februari">Februari</option>
+            <option value="Maret">Maret</option>
+            <option value="April">April</option>
+            <option value="Mei">Mei</option>
+            <option value="Juni">Juni</option>
+            <option value="Juli">Juli</option>
+            <option value="Agustus">Agustus</option>
+            <option value="September">September</option>
+            <option value="Oktober">Oktober</option>
+            <option value="November">November</option>
+            <option value="Desember">Desember</option>
+        </select>
+
+        <select name="thn" required>
+            <option value="">Tahun</option>
+            <script>
+                for (let i = 1980; i <= 2005; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+        <br><br>
+
+        <label>Alamat Rumah:</label><br>
+        <textarea name="alamat" rows="3" cols="30" required></textarea><br><br>
+
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" name="jk" value="Pria" required> Pria
+        <input type="radio" name="jk" value="Wanita" required> Wanita<br><br>
+
+        <label>Asal Sekolah:</label><br>
+        <input type="text" name="sekolah" required><br><br>
+
+        <label>Nilai UAN:</label><br>
+        <input type="text" name="nilai" required><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
